@@ -1,0 +1,51 @@
+       _  _____  ____  _   _  _____                          
+      | |/ ____|/ __ \| \ | |/ ____|                         
+      | | (___ | |  | |  \| | (___   ___ _ ____   _____ _ __ 
+  _   | |\___ \| |  | | . ` |\___ \ / _ \ '__\ \ / / _ \ '__|
+ | |__| |____) | |__| | |\  |____) |  __/ |   \ V /  __/ |   
+  \____/|_____/ \____/|_| \_|_____/ \___|_|    \_/ \___|_|   
+                                                             
+- 			 version  	:	0
+-			 author 	:	Colin Merkel
+
+----------------------------------------------------
+WHAT IS THIS THING?
+----------------------------------------------------
+
+It is a program for connecting a Python program on your computer, by implenting
+the JActionableRequestHandler to do whatever tasks you want, and responding to
+requests from a web-based client. 
+
+It allows you to write a web application that communicates exclusively via WebSocket
+in Python, which will hopefully be useful to me in the future.
+
+----------------------------------------------------
+RUNNING THE SERVER
+----------------------------------------------------
+
+You'll need Python installed, and you'll want to support all of the modules 
+listed in the top of server.py. Then you'll want to configure the configuration
+options in both server.py and main.coffee to fit your system. 
+
+Finally, do
+
+python server.py
+
+and then open in your browser
+
+http://127.0.0.1:8888/
+
+(note that this URL might be different - consult the configuration options that
+you set up in server.py) and this will load up the webpage and you'll get started. 
+
+----------------------------------------------------
+COMPILING THE COFFEESCRIPT
+you need a coffeescript compiler (e.g. node.js) to 
+turn coffeescript into Javascript.
+----------------------------------------------------
+
+The preferred coffeescript compile routing is to move into the code directory, then run
+
+coffee -wc --join main.js js
+
+which will compile all of the files together into the main.js Javascript file.
